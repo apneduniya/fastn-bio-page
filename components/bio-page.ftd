@@ -1,0 +1,101 @@
+-- import: fastn-community.github.io/inter-typography
+-- import: apneduniya.github.io/fastn-bio-page/components/button
+
+
+-- ftd.shadow avatar-shadow-1: 
+color: rgba(0,0,0,0.25)
+x-offset.px: 0
+y-offset.px: 54
+blur.px: 55
+
+-- component wrapper:
+caption name:
+optional string avatar: https://avatars.githubusercontent.com/u/1804128?v=4
+string description:
+string url-title-1:
+string url-1:
+optional string url-title-2:
+optional string url-2:
+optional string url-title-3:
+optional string url-3:
+optional string url-title-4:
+optional string url-4:
+ftd.type-data types: $inter-typography.types
+
+;;  M A I N   P A G E 
+
+-- ftd.row:
+id: main-page
+align-content: center
+height: fill-container
+;; height.fixed.percent: 100
+width: fill-container
+;; background.solid: #222831
+
+;; Background image of main page
+-- ftd.video:
+fit: cover
+loop: true
+autoplay: true
+controls: false
+muted: true
+src: https://static.videezy.com/system/resources/previews/000/052/426/original/4K_35.mp4
+anchor: window
+top.px: 0
+left.px: 0
+height: fill-container
+width: fill-container
+z-index: -1
+
+-- ftd.column:
+margin-vertical.px: 100
+align-self: center
+max-width.fixed.px: 320
+width: fill-container
+
+;; avatar
+-- ftd.image:
+src: $wrapper.avatar
+align-self: center
+width.fixed.px: 180
+height.fixed.px: 180
+border-radius.px: 100
+margin-bottom.px: 26
+shadow: $avatar-shadow-1
+
+;; name
+-- ftd.text: $wrapper.name
+align-self: center
+color: #eeeeee
+margin-bottom.px: 10
+role: $inherited.types.copy-regular 
+
+;; description
+-- ftd.text: $wrapper.description
+align-self: center
+color: #eeeeee
+margin-bottom.px: 40
+role: $inherited.types.copy-regular
+
+;; buttons
+-- button.wrapper: $wrapper.url-title-1
+link: $wrapper.url-1
+
+-- button.wrapper: $wrapper.url-title-2
+link: $wrapper.url-2
+if: { $wrapper.url-title-2 && $wrapper.url-2 }
+
+-- button.wrapper: $wrapper.url-title-3
+link: $wrapper.url-3
+if: { $wrapper.url-title-3 && $wrapper.url-3 }
+
+-- button.wrapper: $wrapper.url-title-4
+link: $wrapper.url-4
+if: { $wrapper.url-title-4 && $wrapper.url-4 }
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: wrapper
+

@@ -1,0 +1,39 @@
+-- import: fastn-community.github.io/inter-typography
+
+-- ftd.shadow button-shadow: 
+color: rgba(0,0,0,0.35)
+x-offset.px: 0
+y-offset.px: 5
+blur.px: 15
+
+-- component wrapper:
+caption title:
+string link:
+ftd.type-data types: $inter-typography.types
+
+-- ftd.row:
+width: fill-container
+align-content: center
+height.fixed.px: 60
+background.solid: #f0f0f0
+link: $wrapper.link
+open-in-new-tab: true 
+cursor: pointer
+shadow: $button-shadow
+border-radius.px: 20
+margin-bottom.px: 26
+
+-- ftd.column:
+align-self: center
+
+-- ftd.text: $wrapper.title
+color: #000000
+role: $inherited.types.regular 
+
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: wrapper
+
