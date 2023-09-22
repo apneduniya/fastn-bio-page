@@ -7,6 +7,8 @@ favicon: /-/apneduniya.github.io/fastn-bio-page/favicon.ico
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/roboto-typography
 
+-- fastn.dependency: fastn-community.github.io/inter-typography
+
 -- fastn.auto-import: apneduniya.github.io/fastn-bio-page/FASTN/ds
 -- fastn.auto-import: apneduniya.github.io/fastn-bio-page/assets
 -- fastn.auto-import: doc-site
